@@ -1,0 +1,2 @@
+# NPF-smearII
+Atmospheric new-particle formation (NPF) is an important source of climatically relevant atmospheric aerosol particles (Kulmala et al., 2014). The role of aerosol particles in global climate is one of the largest uncertainties in our current knowledge of the climate system (Boucher et al., 2013; Paasonen et al., 2018). Measurements at SMEARII station were used to analyze relationship with NPF
