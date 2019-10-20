@@ -4,17 +4,20 @@ Created on Sat Oct 19 21:30:59 2019
 
 @author: VIET
 """
-# This code accompanies the Project.ipynb file. 
+# This code accompanies the Project.ipynb file.
 # This code will parse the downloaded csv, parse them with correct datetime format, and put them together in the "fulldata.csv" file
 
 #%% Load library
+import time
 import pandas as pd
 import concurrent.futures
 import os
 #%% Create read and parse datetime function
+
 def read_data(x):
-    dateparse = lambda x: pd.datetime.strptime(x, '%Y %m %d %H %M %S')
-    data = pd.read_csv('data/' + x, parse_dates = {'Time': ['Year', 'Month', 'Day', 'Hour', 'Minute', 'Second']}, date_parser = dateparse)
+    data = pd.read_csv('data/' + x)
+    data['Time'] = pd.to_datetime(data[['Year', 'Month', 'Day', 'Hour', 'Minute', 'Second']])
+    data = data.drop(['Year', 'Month', 'Day', 'Hour', 'Minute', 'Second'], axis = 1)
     return data
 
 datafiles = os.listdir('data/') # List all files in the data folder
