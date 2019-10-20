@@ -4,6 +4,8 @@ Created on Sat Oct 19 21:21:37 2019
 
 @author: VIET
 """
+# This code accompanies the Project.ipynb file. 
+# This code will download all the data from SMEARII, export them to csv files inside newly created "data" folder
 
 #%% Load library
 import os

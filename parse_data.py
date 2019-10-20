@@ -4,6 +4,10 @@ Created on Sat Oct 19 21:30:59 2019
 
 @author: VIET
 """
+# This code accompanies the Project.ipynb file. 
+# This code will parse the downloaded csv, parse them with correct datetime format, and put them together in the "fulldata.csv" file
+
+#%% Load library
 import pandas as pd
 import concurrent.futures
 import os
