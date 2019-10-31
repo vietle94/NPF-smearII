@@ -16,13 +16,13 @@ import concurrent.futures # For multi-threading IO and multi-processing
 
 data_links = [
         # UVA
-        'https://avaa.tdata.fi/smear-services/smeardata.jsp?variables=UV_A&table=HYY_META&from=2008-01-01 00:00:00.971&to=2009-12-31 23:59:59.859&quality=CHECKED&averaging=NONE&type=NONE',
+#        'https://avaa.tdata.fi/smear-services/smeardata.jsp?variables=UV_A&table=HYY_META&from=2008-01-01 00:00:00.971&to=2009-12-31 23:59:59.859&quality=CHECKED&averaging=NONE&type=NONE',
         # UVB
         'https://avaa.tdata.fi/smear-services/smeardata.jsp?variables=UV_B&table=HYY_META&from=2008-01-01 00:00:00.971&to=2009-12-31 23:59:59.859&quality=CHECKED&averaging=NONE&type=NONE',
         # Air temperature 16.8m
         'https://avaa.tdata.fi/smear-services/smeardata.jsp?variables=T168&table=HYY_META&from=2008-01-01 00:00:00.131&to=2009-12-31 23:59:59.586&quality=CHECKED&averaging=NONE&type=NONE',
         # Wind speed 16.8m
-        'https://avaa.tdata.fi/smear-services/smeardata.jsp?variables=WSU168&table=HYY_META&from=2008-01-01 00:00:00.131&to=2009-12-31 23:59:59.586&quality=CHECKED&averaging=NONE&type=NONE',
+#        'https://avaa.tdata.fi/smear-services/smeardata.jsp?variables=WSU168&table=HYY_META&from=2008-01-01 00:00:00.131&to=2009-12-31 23:59:59.586&quality=CHECKED&averaging=NONE&type=NONE',
         # Humidity 16.8m
         'https://avaa.tdata.fi/smear-services/smeardata.jsp?variables=RHIRGA168&table=HYY_META&from=2008-01-01 00:00:00.131&to=2009-12-31 23:59:59.586&quality=CHECKED&averaging=NONE&type=NONE',
         # O3 16.8m
@@ -36,7 +36,7 @@ data_links = [
 #%% Download file & parse date time function
 
 #Create folder to store all csv file
-if not(os.path.isdir('/data')):
+if not(os.path.isdir('data')):
     os.makedirs('data')
 
 
